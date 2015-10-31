@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title></title>
+    <style>
+        img {
+            border: none;
+        }
+        body {
+            margin: 0 0;
+            padding: 0 0;
+        }
+        .bg {
+            width: 768px;
+            height: 1024px;
+            background: url(img/bg.jpg) 0 0 no-repeat;
+            background-size: 100% 100%;
+        }
+        .long {
+            position: absolute;
+            top: 578px;
+            left: 502px;
+            z-index: 10;
+            -webkit-animation: long 3s linear;
+            -webkit-transform-origin: 6px 41.6px;
+            -webkit-animation-iteration-count: infinite;
+        }
+        @-webkit-keyframes long {
+            100% {-webkit-transform: rotate(360deg);}
+        }
+        .short {
+            position: absolute;
+            top: 599px;
+            left: 474px;
+            -webkit-animation: long 36s linear;
+            -webkit-transform-origin: 34px 20px;
+            -webkit-animation-iteration-count: infinite;
+        }
+        @-webkit-keyframes short {
+            100% {-webkit-transform: rotate(360deg);}
+        }
+
+        .hour {
+            position: absolute;
+            top: 412px;
+            left: 207px;
+            -webkit-animation: short 48s linear;
+            -webkit-transform-origin: 6px 37px;
+            -webkit-animation-iteration-count: infinite;
+        }
+        .minute {
+            position: absolute;
+            top: 402px;
+            left: 208px;
+            z-index: 10;
+            -webkit-animation: long 4s linear;
+            -webkit-transform-origin: 5px 47px;
+            -webkit-animation-iteration-count: infinite;
+        }
+
+    </style>
+</head>
+<body>
+<div class="bg"></div>
+<img src="img/long.png" class="long" width="52"/>
+<img src="img/short.png" class="short" width="40" />
+
+<img src="img/minute.png" class="minute" width="32"/>
+<img src="img/hour.png" class="hour" width="11" />
+</body>
+</html>
